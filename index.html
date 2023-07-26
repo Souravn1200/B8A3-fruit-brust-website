@@ -6,86 +6,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leagal Solution</title>
-  
+
     <!-- Google Font -->
-  
+
     <style>
-      .manropefont {
-        font-family: 'Manrope', sans-serif;
-      }
+        .manropefont {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.7) 0%, rgba(18, 18, 18, 0.0) 100%);
+    pointer-events: none;
+  }
     </style>
-  
+
     <!-- font awsome cdn -->
-  
+
     <script src="https://kit.fontawesome.com/d425d8e87c.js" crossorigin="anonymous"></script>
-  
-  
+
+
     <!-- Tailwind and Daisy CDN  -->
-  
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-  
+
     <!-- Tailwind custom -->
-  
+
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
             }
-          }
         }
-      }
     </script>
-  
-  </head>
+
+</head>
 
 <body>
-    
-<header class="container mx-auto mt-5">
-        
-    <!-- Nav section starst -->
-<section>
 
-    <div class="navbar lg:bg-[#F85559] rounded-full justify-between lg:justify-center items-center text-white">
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Shops</a></li>
-            <li><a>All Fruits</a></li>
-          </ul>
-        </div>
+    <header class="container mx-auto mt-5">
 
-        <div class="navbar-start justify-center text-center text-black">
-            <img class="h-12 w-12 mr-4" src="images/logo.png" alt=""> <p class="text-4xl">Fruit Burst</p>
-          </div>
+        <!-- Nav section starst -->
+        <section>
 
-          <div class="relative hidden lg:block">
-            <i class="fa-solid fa-magnifying-glass text-black left-[80%] top-2 translate-y-2/4 absolute"></i>
-            <input type="text" placeholder="Search" class="input rounded-full text-black"/>
-          </div>
-          
+            <div class="navbar lg:bg-[#F85559] rounded-full justify-between lg:justify-center items-center text-white">
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Shops</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
 
-          <div>
-            <i class="fa-solid fa-bars lg:hidden text-black"></i>
-          </div>
+                <div class="navbar-start justify-center text-center text-black lg:text-white">
+                    <img class="h-12 w-12 mr-4" src="images/logo.png" alt="">
+                    <p class="text-4xl">Fruit Burst</p>
+                </div>
 
-      </div>
+                <div class="relative hidden lg:block">
+                    <i class="fa-solid fa-magnifying-glass text-black left-[80%] top-2 translate-y-2/4 absolute"></i>
+                    <input type="text" placeholder="Search" class="input rounded-full text-black" />
+                </div>
 
 
-</section>
-    <!-- Nav section ends -->
-</header>
+                <div>
+                    <i class="fa-solid fa-bars lg:hidden text-black"></i>
+                </div>
 
-<main>
-
-</main>
+            </div>
 
 
-<footer>
+        </section>
+        <!-- Nav section ends -->
+    </header>
 
-</footer>
+    <main>
+
+        <!-- Banner section starts -->
+
+        <section class="container mx-auto mt-10 relative">
+
+            <div class="carousel w-full">
+
+                <!-- Slider 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="/images/banner1.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                  <div class="absolute top-[22%] left-[28%] text-white text-center">
+                    <h2 class="text-5xl font-extrabold uppercase mb-5">Exotic tastes at your <br> doorstep</h2>
+                    <p class="text-2xl mb-5">We supply highly quality organic products.</p>
+                    <button class="btn btn-error text-white">Error</button>
+                  </div>
+                </div>
+              
+                <!-- Slider 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="/images/banner2.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                  <div class="absolute top-[22%] left-[28%] text-white text-center">
+                    <h2 class="text-5xl font-extrabold uppercase mb-5">Exotic tastes at your <br> doorstep</h2>
+                    <p class="text-2xl mb-5">We supply highly quality organic products.</p>
+                    <button class="btn btn-error text-white">Error</button>
+                  </div>
+                </div>
+              
+                <!-- Slider 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="/images/banner3.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                  <div class="absolute top-[22%] left-[28%] text-white text-center">
+                    <h2 class="text-5xl font-extrabold uppercase mb-5">Exotic tastes at your <br> doorstep</h2>
+                    <p class="text-2xl mb-5">We supply highly quality organic products.</p>
+                    <button class="btn btn-error text-white">Error</button>
+                  </div>
+                </div>
+              
+                <!-- Slider 4 -->
+                <div id="slide4" class="carousel-item relative w-full">
+                  <img src="/images/banner4.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                  <div class="absolute top-[22%] left-[28%] text-white text-center">
+                    <h2 class="text-5xl font-extrabold uppercase mb-5">Exotic tastes at your <br> doorstep</h2>
+                    <p class="text-2xl mb-5">We supply highly quality organic products.</p>
+                    <button class="btn btn-error text-white">Error</button>
+                  </div>
+                </div>
+              </div>
+
+              
+              
+              
+            <div class="flex items-center justify-center bg-white absolute top-[90%] left-[15%] shadow-pink-100">
+
+            <img src="images/fruit1.png" class="px-5 py-5" alt="">
+            <img src="images/fruit2.png" class="px-5 py-5" alt="">
+            <img src="images/fruit3.png" class="px-5 py-5" alt="">
+            <img src="images/fruit4.png" class="px-5 py-5" alt="">
+            <img src="images/fruit5.png" class="px-5 py-5" alt="">
+              </div>
+        </section>
+
+        <!-- Banner section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
 </body>
+
 </html>
